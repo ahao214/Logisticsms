@@ -85,6 +85,8 @@
     <Compile Include="DAL\AirTransportDetail.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\BaseFiles\IProvider.cs" />
+    <Compile Include="DAL\BaseFiles\ProviderBase.cs" />
     <Compile Include="DAL\Customer.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -106,6 +108,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DAL\ProviderFile\AirTransportDetailProvider.cs" />
+    <Compile Include="DAL\ProviderFile\AirTransportProvider.cs" />
+    <Compile Include="DAL\ProviderFile\CustomerProvider.cs" />
+    <Compile Include="DAL\ProviderFile\MemberProvider.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="MainWindow.xaml">
