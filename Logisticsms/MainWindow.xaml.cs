@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logisticsms.DAL.Helper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace Logisticsms
         public MainWindow()
         {
             InitializeComponent();
+            //MDFiveHelper.GetMDFive("1");
         }
     }
 }

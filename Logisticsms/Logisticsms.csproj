@@ -90,6 +90,7 @@
     <Compile Include="DAL\Customer.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Helper\MDFiveHelper.cs" />
     <Compile Include="DAL\Member.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
