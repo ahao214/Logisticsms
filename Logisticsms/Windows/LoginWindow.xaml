@@ -5,9 +5,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Logisticsms.Windows"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="主界面"
+    x:Name="loginWindow"
+    Title="用户登录"
     Width="800"
     Height="450"
+    DataContext="{Binding Source={StaticResource Locator}, Path=Login}"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
     <Grid>
@@ -19,7 +21,7 @@
             <Image
                 Grid.Column="0"
                 Width="200"
-                Source="/Images/chengbao.jpg" />
+                Source="/Images/1.png" />
             <Grid Grid.Column="1" Margin="15,0,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -46,8 +48,10 @@
                     Width="150"
                     Height="35"
                     Margin="10,0,0,0"
-                    VerticalAlignment="Center" />
+                    VerticalAlignment="Center"
+                    Text="{Binding Member.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 <PasswordBox
+                    x:Name="_passwordBox"
                     Grid.Row="1"
                     Grid.Column="1"
                     Width="150"
@@ -61,6 +65,8 @@
                     Height="35"
                     Margin="10,0,0,0"
                     VerticalAlignment="Center"
+                    Command="{Binding LoginCommand}"
+                    CommandParameter="{Binding ElementName=loginWindow}"
                     Content="登录" />
             </Grid>
         </Grid>
