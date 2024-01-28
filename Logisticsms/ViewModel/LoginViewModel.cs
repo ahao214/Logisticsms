@@ -16,6 +16,8 @@ namespace Logisticsms.ViewModel
 
         #region properties
 
+        public AppData AppData { get; set; } = AppData.Instance;
+
         public Member member = new Member() { Name = "admin" };
         public Member Member
         {
@@ -39,18 +41,21 @@ namespace Logisticsms.ViewModel
                     {
                         return;
                     }
-                    var entity = memberProvider.GetAll().FirstOrDefault(t => t.Name == Member.Name);
-                    if (entity == null)
+                    var currentUser = memberProvider.GetAll().FirstOrDefault(t => t.Name == Member.Name);
+                    if (currentUser == null)
                     {
                         MessageBox.Show("无此用户");
                         return;
                     }
                     string password = MDFiveHelper.GetMDFive(Member.PasswordChar);
-                    if (entity.Password != password)
+                    if (currentUser.Password != password)
                     {
                         MessageBox.Show("密码错误");
                         return;
                     }
+                    // 记录登录用户信息
+                    AppData.CurrentUser = currentUser;
+
                     MainWindow mainWindow = new MainWindow();
                     mainWindow.Show();
                     window.Close();
