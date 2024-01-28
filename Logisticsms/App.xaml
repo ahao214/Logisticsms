@@ -15,6 +15,7 @@
                 d:IsDataSource="True" />
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Style/RadioButtonDictionary.xaml" />
+                <ResourceDictionary Source="Style/ButtonDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

@@ -21,9 +21,32 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Column="0" Tag="菜单栏">
+            <StackPanel
+                Grid.Column="0"
+                Background="#314053"
+                Tag="菜单栏">
                 <RadioButton
-                    Content="空运"
+                    Content="空运分页"
+                    Style="{StaticResource RadioButtonStyle}"
+                    Tag="&#xe69b;" />
+                <RadioButton
+                    Content="海运分页"
+                    Style="{StaticResource RadioButtonStyle}"
+                    Tag="&#xe69b;" />
+                <RadioButton
+                    Content="快递分页"
+                    Style="{StaticResource RadioButtonStyle}"
+                    Tag="&#xe69b;" />
+                <RadioButton
+                    Content="客户管理"
+                    Style="{StaticResource RadioButtonStyle}"
+                    Tag="&#xe69b;" />
+                <RadioButton
+                    Content="财务管理"
+                    Style="{StaticResource RadioButtonStyle}"
+                    Tag="&#xe69b;" />
+                <RadioButton
+                    Content="系统管理"
                     Style="{StaticResource RadioButtonStyle}"
                     Tag="&#xe69b;" />
             </StackPanel>
