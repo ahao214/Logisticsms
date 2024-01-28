@@ -33,6 +33,9 @@
             </StackPanel>
         </Grid>
         <!--  表格内容  -->
-        <DataGrid Grid.Row="1" ItemsSource="{Binding CustomerList}" />
+        <DataGrid
+            Grid.Row="1"
+            ItemsSource="{Binding CustomerList}"
+            Style="{StaticResource GeneralDataGridStyle}" />
     </Grid>
 </UserControl>
