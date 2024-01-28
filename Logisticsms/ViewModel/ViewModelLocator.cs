@@ -46,7 +46,9 @@ namespace Logisticsms.ViewModel
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<LoginViewModel>();
             SimpleIoc.Default.Register<AirTransportViewModel>();
-            
+
+            SimpleIoc.Default.Register<CustomerViewModel>();
+
         }
 
         public MainViewModel Main
@@ -72,7 +74,15 @@ namespace Logisticsms.ViewModel
             }
         }
 
+        public CustomerViewModel Customer
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<CustomerViewModel>();
+            }
+        }
         
+
 
         public static void Cleanup()
         {
