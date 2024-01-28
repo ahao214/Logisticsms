@@ -26,26 +26,34 @@
                 Background="#314053"
                 Tag="菜单栏">
                 <RadioButton
+                    x:Name="AirTransportView"
+                    Click="RadioButton_Click"
                     Content="空运分页"
                     Style="{StaticResource RadioButtonStyle}"
                     Tag="&#xe69b;" />
                 <RadioButton
+                    Click="RadioButton_Click"
                     Content="海运分页"
                     Style="{StaticResource RadioButtonStyle}"
                     Tag="&#xe69b;" />
                 <RadioButton
+                    Click="RadioButton_Click"
                     Content="快递分页"
                     Style="{StaticResource RadioButtonStyle}"
                     Tag="&#xe69b;" />
                 <RadioButton
+                    x:Name="CustomerView"
+                    Click="RadioButton_Click"
                     Content="客户管理"
                     Style="{StaticResource RadioButtonStyle}"
                     Tag="&#xe69b;" />
                 <RadioButton
+                    Click="RadioButton_Click"
                     Content="财务管理"
                     Style="{StaticResource RadioButtonStyle}"
                     Tag="&#xe69b;" />
                 <RadioButton
+                    Click="RadioButton_Click"
                     Content="系统管理"
                     Style="{StaticResource RadioButtonStyle}"
                     Tag="&#xe69b;" />

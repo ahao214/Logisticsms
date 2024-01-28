@@ -1,18 +1,6 @@
-﻿using Logisticsms.DAL.Helper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Logisticsms.View;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Logisticsms
 {
@@ -25,6 +13,25 @@ namespace Logisticsms
         {
             InitializeComponent();
             //MDFiveHelper.GetMDFive("1");
+        }
+
+        private void RadioButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!(sender is RadioButton button))
+                return;
+            if (string.IsNullOrEmpty(button.Name))
+                return;
+            switch (button.Name)
+            {
+                case "AirTransportView":
+                    container.Content = new AirTransportView();
+                    break;
+                case "CustomerView":
+                    container.Content = new CustomerView();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
