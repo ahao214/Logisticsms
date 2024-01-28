@@ -16,7 +16,7 @@ namespace Logisticsms.ViewModel
 
         #region properties
 
-        public Member member = new Member();
+        public Member member = new Member() { Name = "admin" };
         public Member Member
         {
             get { return member; }
