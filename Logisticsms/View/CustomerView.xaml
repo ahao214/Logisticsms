@@ -32,7 +32,7 @@
                 <Button Content="新增客户" Style="{StaticResource ButtonStyle}" />
             </StackPanel>
         </Grid>
-        <!--  表格  -->
-        <DataGrid Grid.Row="1" />
+        <!--  表格内容  -->
+        <DataGrid Grid.Row="1" ItemsSource="{Binding CustomerList}" />
     </Grid>
 </UserControl>
