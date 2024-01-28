@@ -16,6 +16,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Style/RadioButtonDictionary.xaml" />
                 <ResourceDictionary Source="Style/ButtonDictionary.xaml" />
+                <ResourceDictionary Source="Style/DataGridDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

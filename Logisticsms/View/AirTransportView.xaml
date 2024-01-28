@@ -25,7 +25,10 @@
                 <Button Content="新增单号" Style="{StaticResource ButtonStyle}" />
                 <Button Content="删除单号" Style="{StaticResource ButtonStyle}" />
             </StackPanel>
-
         </Grid>
+        <!--表格-->
+        <DataGrid Grid.Row="1">
+            
+        </DataGrid>
     </Grid>
 </UserControl>
