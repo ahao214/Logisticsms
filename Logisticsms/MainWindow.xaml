@@ -10,5 +10,33 @@
     Height="800"
     DataContext="{Binding Source={StaticResource Locator}, Path=Main}"
     mc:Ignorable="d">
-    <Grid />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Tag="主体内容">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Tag="菜单栏">
+                <RadioButton
+                    Content="空运"
+                    Style="{StaticResource RadioButtonStyle}"
+                    Tag="&#xe69b;" />
+            </StackPanel>
+            <ContentControl
+                x:Name="container"
+                Grid.Column="1"
+                Tag="内容" />
+        </Grid>
+        <Grid Grid.Row="1" Tag="状态栏">
+            <StatusBar>
+                <TextBlock Text="使用单位：Joker科技公司" />
+            </StatusBar>
+        </Grid>
+
+    </Grid>
 </Window>

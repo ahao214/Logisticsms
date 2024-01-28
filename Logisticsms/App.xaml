@@ -13,6 +13,9 @@
                 xmlns:vm="clr-namespace:Logisticsms.ViewModel"
                 x:Key="Locator"
                 d:IsDataSource="True" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Style/RadioButtonDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
