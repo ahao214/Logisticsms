@@ -43,10 +43,36 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTextColumn Width="150" Binding="{Binding Name}" Header="客户名称" />
-                <DataGridTextColumn Width="150" Binding="{Binding Telephone}" Header="电话" />
-                <DataGridTextColumn Width="200" Binding="{Binding Nation}" Header="国家" />
-                <DataGridTextColumn Width="300" Binding="{Binding Address}" Header="地址" />
+                <DataGridTemplateColumn Width="150" Header="电话">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <TextBox Style="{StaticResource GeneralTextBoxStyle}" Text="{Binding Telephone}" />
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Width="150" Header="国家">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <TextBox Style="{StaticResource GeneralTextBoxStyle}" Text="{Binding Nation}" />
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Width="150" Header="地址">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <TextBox Style="{StaticResource GeneralTextBoxStyle}" Text="{Binding Address}" />
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
                 <DataGridTextColumn Width="150" Binding="{Binding InsertDate}" Header="录入时间" />
 
             </DataGrid.Columns>

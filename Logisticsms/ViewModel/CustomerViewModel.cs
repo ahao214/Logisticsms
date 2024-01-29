@@ -2,6 +2,7 @@
 using GalaSoft.MvvmLight.Command;
 using Logisticsms.DAL;
 using Logisticsms.DAL.ProviderFile;
+using System;
 using System.Collections.ObjectModel;
 using System.Windows;
 
@@ -58,7 +59,8 @@ namespace Logisticsms.ViewModel
                 {
                     Customer customer = new Customer()
                     {
-                        Name = "新客户"
+                        Name = "新客户",
+                        InsertDate = DateTime.Now
                     };
                     var count = _customerProvider.Insert(customer);
                     if (count > 0)
