@@ -10,9 +10,11 @@ namespace Logisticsms
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainViewModel vm;
         public MainWindow()
         {
             InitializeComponent();
+            vm = DataContext as MainViewModel;
             //MDFiveHelper.GetMDFive("1");
         }
 
@@ -23,7 +25,7 @@ namespace Logisticsms
             if (string.IsNullOrEmpty(button.Name))
                 return;
 
-            Save(container.Content); // 保存当前页面的数据
+            vm?.Save(container.Content); // 保存当前页面的数据
 
 
             switch (button.Name)
@@ -39,40 +41,6 @@ namespace Logisticsms
             }
         }
 
-
-
-        private void Save(object content)
-        {
-            var name = container.GetType().Name;
-            switch (name)
-            {
-                case "AirTransportView":
-                    if(!(content is AirTransportView airTransportView))
-                    {
-                        return;
-                    }
-                    if(!(airTransportView .DataContext  is AirTransportViewModel airTransportViewModel))
-                    {
-                        return;
-                    }
-                    airTransportViewModel.Save();
-
-                    break;
-                case "CustomerView":
-                    if (!(content is CustomerView customerView))
-                    {
-                        return;
-                    }
-                    if (!(customerView.DataContext is CustomerViewModel customerViewModel ))
-                    {
-                        return;
-                    }
-                    customerViewModel.Save();
-                    break;
-                default:
-                    break;
-            }
-        }
 
     }
 }
