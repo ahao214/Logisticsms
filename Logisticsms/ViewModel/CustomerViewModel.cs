@@ -60,7 +60,8 @@ namespace Logisticsms.ViewModel
                     Customer customer = new Customer()
                     {
                         Name = "新客户",
-                        InsertDate = DateTime.Now
+                        InsertDate = DateTime.Now,
+                        MemberId = AppData.CurrentUser.Id
                     };
                     var count = _customerProvider.Insert(customer);
                     if (count > 0)
