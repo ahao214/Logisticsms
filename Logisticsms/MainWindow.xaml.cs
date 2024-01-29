@@ -25,8 +25,10 @@ namespace Logisticsms
             if (string.IsNullOrEmpty(button.Name))
                 return;
 
-            vm?.Save(container.Content); // 保存当前页面的数据
-
+            if (!(container.Content is null))
+            {
+                vm?.Save(container.Content); // 保存当前页面的数据
+            }
 
             switch (button.Name)
             {
