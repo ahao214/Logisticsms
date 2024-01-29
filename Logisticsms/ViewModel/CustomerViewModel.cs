@@ -77,6 +77,17 @@ namespace Logisticsms.ViewModel
         }
 
 
+
+
+        #endregion
+
+        #region Method 
+
+        public void Save()
+        {
+            _customerProvider.Save();
+        }
+
         #endregion
     }
 }

@@ -7,5 +7,14 @@ namespace Logisticsms.ViewModel
         public AppData AppData { get; set; } = AppData.Instance;
 
 
+        #region
+        
+        public void Save()
+        {
+            
+        }
+
+        #endregion
+
     }
 }

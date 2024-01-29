@@ -44,7 +44,7 @@
                 <RadioButton
                     x:Name="CustomerView"
                     Click="RadioButton_Click"
-                    Content="客户管理"
+                    Content="客户管理"                    
                     Style="{StaticResource RadioButtonStyle}"
                     Tag="&#xe68a;" />
                 <RadioButton
