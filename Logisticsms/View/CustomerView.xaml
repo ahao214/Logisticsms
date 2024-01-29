@@ -18,7 +18,7 @@
         <!--  标题和按钮  -->
         <Grid Grid.Row="0">
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Text="客户管理" />
-            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+            <StackPanel Margin="0,0,8,0" HorizontalAlignment="Right" Orientation="Horizontal">
                 <Button Command="{Binding InsertCustomerCommand}" Content="新增客户" Style="{StaticResource ButtonStyle}" />
             </StackPanel>
         </Grid>
@@ -37,7 +37,7 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Grid>
-                                <TextBox Style="{StaticResource GeneralTextBoxStyle}" Text="{Binding Name}" />
+                                <TextBox Style="{StaticResource GeneralTextBoxStyle}" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
@@ -47,7 +47,7 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Grid>
-                                <TextBox Style="{StaticResource GeneralTextBoxStyle}" Text="{Binding Telephone}" />
+                                <TextBox Style="{StaticResource GeneralTextBoxStyle}" Text="{Binding Telephone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
@@ -57,7 +57,7 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Grid>
-                                <TextBox Style="{StaticResource GeneralTextBoxStyle}" Text="{Binding Nation}" />
+                                <TextBox Style="{StaticResource GeneralTextBoxStyle}" Text="{Binding Nation, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
@@ -67,7 +67,7 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Grid>
-                                <TextBox Style="{StaticResource GeneralTextBoxStyle}" Text="{Binding Address}" />
+                                <TextBox Style="{StaticResource GeneralTextBoxStyle}" Text="{Binding Address, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

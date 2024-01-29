@@ -31,5 +31,10 @@ namespace Logisticsms.DAL.ProviderFile
             db.Entry(entity).State = EntityState.Modified;
             return db.SaveChanges();
         }
+
+        public int Save()
+        {
+            return db.SaveChanges();
+        }
     }
 }
