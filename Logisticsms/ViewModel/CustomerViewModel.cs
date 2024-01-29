@@ -3,6 +3,7 @@ using GalaSoft.MvvmLight.Command;
 using Logisticsms.DAL;
 using Logisticsms.DAL.ProviderFile;
 using System.Collections.ObjectModel;
+using System.Windows;
 
 namespace Logisticsms.ViewModel
 {
@@ -27,16 +28,52 @@ namespace Logisticsms.ViewModel
 
         #region Command 
 
+        /// <summary>
+        /// 加载窗体
+        /// </summary>
         public RelayCommand LoadedCommand
         {
             get
             {
                 return new RelayCommand(() =>
                 {
-
+                    var list = _customerProvider.GetAll();
+                    CustomerList.Clear();
+                    foreach (var item in list)
+                    {
+                        CustomerList.Add(item);
+                    }
                 });
             }
         }
+
+        /// <summary>
+        /// 新增客户
+        /// </summary>
+        public RelayCommand InsertCustomerCommand
+        {
+            get
+            {
+                return new RelayCommand(() =>
+                {
+                    Customer customer = new Customer()
+                    {
+                        Name = "新客户"
+                    };
+                    var count = _customerProvider.Insert(customer);
+                    if (count > 0)
+                    {
+                        CustomerList.Add(customer);
+                    }
+                    else
+                    {
+                        MessageBox.Show("插入失败");
+                    }
+                });
+            }
+
+        }
+
 
         #endregion
     }

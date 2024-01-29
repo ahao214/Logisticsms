@@ -1,22 +1,15 @@
 <Application
-    x:Class="Logisticsms.App"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:local="clr-namespace:Logisticsms"
-    d1p1:Ignorable="d"
-    StartupUri="Windows/LoginWindow.xaml">
+    x:Class="Logisticsms.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Logisticsms" d1p1:Ignorable="d" StartupUri="Windows/LoginWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <vm:ViewModelLocator
-                xmlns:vm="clr-namespace:Logisticsms.ViewModel"
-                x:Key="Locator"
-                d:IsDataSource="True" />
+            <vm:ViewModelLocator xmlns:vm="clr-namespace:Logisticsms.ViewModel" x:Key="Locator" d:IsDataSource="True" />
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Style/RadioButtonDictionary.xaml" />
                 <ResourceDictionary Source="Style/ButtonDictionary.xaml" />
                 <ResourceDictionary Source="Style/DataGridDictionary.xaml" />
+                <ResourceDictionary Source="Style/TextBoxDictionary.xaml" />
+
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
