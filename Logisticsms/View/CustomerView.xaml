@@ -73,6 +73,16 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
+                <DataGridTemplateColumn Width="150" Header="备注">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <TextBox Style="{StaticResource GeneralTextBoxStyle}" Text="{Binding Tag, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
                 <DataGridTextColumn Width="150" Binding="{Binding InsertDate}" Header="录入时间" />
 
             </DataGrid.Columns>
