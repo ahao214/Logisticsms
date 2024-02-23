@@ -13,20 +13,36 @@
             <RowDefinition Height="auto" />
             <RowDefinition />
             <RowDefinition Height="auto" />
+            <RowDefinition Height="100" />
         </Grid.RowDefinitions>
         <!--  标题和按钮  -->
-        <Grid Grid.Row="0">
-            <TextBlock
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                FontSize="18"
-                Text="空运出货记录" />
-            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                <Button Content="新增单号" Style="{StaticResource ButtonStyle}" />
-                <Button Content="删除单号" Style="{StaticResource ButtonStyle}" />
-            </StackPanel>
+        <Grid Grid.Row="0" Margin="0 10 0 0">
+            <TextBlock  HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        FontSize="18"
+                        FontFamily="../Fonts/#iconfont"
+                        Text="&#xe663;空运单号管理"
+                        Margin="10 0 0 0" />
         </Grid>
-        <!--  表格  -->
-        <DataGrid Grid.Row="1" />
+        <!--  表格内容  -->
+        <DataGrid Grid.Row="1" Style="{StaticResource GeneralDataGridStyle}" RowStyle="{StaticResource GeneralDataGridRowStyle}" CellStyle="{StaticResource GeneralDataGridCellStyle}">
+            
+        </DataGrid>
+        
+        <!--操作按钮-->
+        <StackPanel Grid.Row="2" HorizontalAlignment="Left"
+                    Orientation="Horizontal">
+            <Button Content="新增单号"
+                    Style="{StaticResource ButtonStyle}" />
+            <Button Content="删除单号"
+                    Style="{StaticResource ButtonStyle}" />
+        </StackPanel>
+
+        <!--备注-->
+        <StackPanel Grid.Row="3"
+                    HorizontalAlignment="Left"
+                    Orientation="Horizontal">
+            <TextBlock Text="" />
+        </StackPanel>
     </Grid>
 </UserControl>
