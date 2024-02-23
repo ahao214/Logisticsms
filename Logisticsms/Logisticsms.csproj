@@ -115,6 +115,7 @@
     <Compile Include="DAL\ProviderFile\AirTransportProvider.cs" />
     <Compile Include="DAL\ProviderFile\CustomerProvider.cs" />
     <Compile Include="DAL\ProviderFile\MemberProvider.cs" />
+    <Compile Include="ViewModel\AddAirTransportWindowViewModel.cs" />
     <Compile Include="ViewModel\AirTransportViewModel.cs" />
     <Compile Include="ViewModel\CustomerViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
