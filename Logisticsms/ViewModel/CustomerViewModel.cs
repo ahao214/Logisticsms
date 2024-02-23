@@ -5,6 +5,7 @@ using Logisticsms.DAL.ProviderFile;
 using System;
 using System.Collections.ObjectModel;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace Logisticsms.ViewModel
 {
@@ -76,7 +77,35 @@ namespace Logisticsms.ViewModel
             }
 
         }
-       
+
+
+        /// <summary>
+        /// 删除客户
+        /// </summary>
+        public RelayCommand<Button> DeleteCustomerCommand
+        {
+            get
+            {
+                return new RelayCommand<Button>((button) =>
+                {
+                    if (!(button.Tag is Customer customer))
+                        return;
+
+                    AppData.ShowMarker();
+
+                    if (MessageBox.Show($"是否删除[{customer.Name}]?", "确认", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                    {
+                        var count = _customerProvider.Delete(customer);
+                        if (count > 0)
+                        {
+                            CustomerList.Remove(customer);
+                        }
+                    }
+
+                    AppData.HideMarker();                    
+                });
+            }
+        }
 
         #endregion
 

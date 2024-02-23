@@ -16,6 +16,8 @@ namespace Logisticsms
             InitializeComponent();
             vm = DataContext as MainViewModel;
             //MDFiveHelper.GetMDFive("1");
+            AppData.Instance.MainWindow = this;
+            this.marker.Visibility = Visibility.Collapsed;
         }
 
         private void RadioButton_Click(object sender, RoutedEventArgs e)

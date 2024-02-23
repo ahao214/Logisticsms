@@ -14,39 +14,66 @@
             <i:InvokeCommandAction Command="{Binding ClosingCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=local:MainWindow}}" />
         </i:EventTrigger>
     </i:Interaction.Triggers>
-
+    
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="auto" />
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Tag="主体内容">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto" />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
+        <Grid x:Name="marker"
+              Background="Black"
+              Panel.ZIndex="99999"
+              Opacity="0.50" Visibility="Collapsed" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0"
+                  Tag="主体内容">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Column="0" Background="#314053" Tag="菜单栏">
-                <RadioButton
-                    x:Name="AirTransportView" Click="RadioButton_Click" Content="空运分页"
-                    Style="{StaticResource RadioButtonStyle}"
-                    Tag="&#xe69b;" />
-                <RadioButton Click="RadioButton_Click" Content="海运分页" Style="{StaticResource RadioButtonStyle}" Tag="&#xe692;" />
-                <RadioButton Click="RadioButton_Click" Content="快递分页" Style="{StaticResource RadioButtonStyle}" Tag="&#xe6a4;" />
-                <RadioButton
-                    x:Name="CustomerView" Click="RadioButton_Click" Content="客户管理"
-                    Style="{StaticResource RadioButtonStyle}"
-                    Tag="&#xe68a;" />
-                <RadioButton Click="RadioButton_Click" Content="财务管理" Style="{StaticResource RadioButtonStyle}" Tag="&#xe62a;" />
-                <RadioButton Click="RadioButton_Click" Content="系统管理" Style="{StaticResource RadioButtonStyle}" Tag="&#xe621;" />
-            </StackPanel>
-            <ContentControl x:Name="container" Grid.Column="1" Tag="内容" />
-        </Grid>
-        <Grid Grid.Row="1" Tag="状态栏">
-            <StatusBar>
-                <TextBlock Text="使用单位：Joker科技公司" />
-            </StatusBar>
-        </Grid>
+                <StackPanel Grid.Column="0"
+                            Background="#314053"
+                            Tag="菜单栏">
+                    <RadioButton x:Name="AirTransportView"
+                                 Click="RadioButton_Click"
+                                 Content="空运分页"
+                                 Style="{StaticResource RadioButtonStyle}"
+                                 Tag="&#xe69b;" />
+                    <RadioButton Click="RadioButton_Click"
+                                 Content="海运分页"
+                                 Style="{StaticResource RadioButtonStyle}"
+                                 Tag="&#xe692;" />
+                    <RadioButton Click="RadioButton_Click"
+                                 Content="快递分页"
+                                 Style="{StaticResource RadioButtonStyle}"
+                                 Tag="&#xe6a4;" />
+                    <RadioButton x:Name="CustomerView"
+                                 Click="RadioButton_Click"
+                                 Content="客户管理"
+                                 Style="{StaticResource RadioButtonStyle}"
+                                 Tag="&#xe68a;" />
+                    <RadioButton Click="RadioButton_Click"
+                                 Content="财务管理"
+                                 Style="{StaticResource RadioButtonStyle}"
+                                 Tag="&#xe62a;" />
+                    <RadioButton Click="RadioButton_Click"
+                                 Content="系统管理"
+                                 Style="{StaticResource RadioButtonStyle}"
+                                 Tag="&#xe621;" />
+                </StackPanel>
+                <ContentControl x:Name="container"
+                                Grid.Column="1"
+                                Tag="内容" />
+            </Grid>
+            <Grid Grid.Row="1"
+                  Tag="状态栏">
+                <StatusBar>
+                    <TextBlock Text="使用单位：Joker科技公司" />
+                </StatusBar>
+            </Grid>
 
+        </Grid>
     </Grid>
+    
 </Window>
