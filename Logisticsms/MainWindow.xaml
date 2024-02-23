@@ -38,14 +38,15 @@
                         <ColumnDefinition Width="auto" />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <StackPanel Orientation="Horizontal">
-                        <Button Content="客户管理"
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="0 0 0 10 ">
+                        <Button x:Name="CustomerView" Click="Button_Click"
+                                Content="客户管理"
                                 Tag="&#xe68a;"
                                 Style="{StaticResource MenuButtonStyle}" />
-                        <Button Content="财务管理"
+                        <Button Click="Button_Click" Content="财务管理"
                                 Tag="&#xe62a;"
                                 Style="{StaticResource MenuButtonStyle}" />
-                        <Button Content="系统管理"
+                        <Button Click="Button_Click" Content="系统管理"
                                 Tag="&#xe621;"
                                 Style="{StaticResource MenuButtonStyle}" />
                     </StackPanel>
@@ -99,7 +100,7 @@
                                  Content="快递"
                                  Style="{StaticResource RadioButtonStyle}"
                                  Tag="&#xe6a4;" />
-                    <RadioButton Visibility="Collapsed" x:Name="CustomerView"
+                    <RadioButton Visibility="Collapsed" 
                                  Click="RadioButton_Click"
                                  Content="客户管理"
                                  Style="{StaticResource RadioButtonStyle}"

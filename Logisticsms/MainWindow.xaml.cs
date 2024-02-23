@@ -46,5 +46,30 @@ namespace Logisticsms
         }
 
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (!(sender is Button button))
+                return;
+            if (string.IsNullOrEmpty(button.Name))
+                return;
+
+            if (!(container.Content is null))
+            {
+                vm?.Save(container.Content); // 保存当前页面的数据
+            }
+
+            switch (button.Name)
+            {
+                case "AirTransportView":
+                    container.Content = new AirTransportView();
+                    break;
+                case "CustomerView":
+                    container.Content = new CustomerView();
+                    break;
+                default:
+                    break;
+            }
+        }
+
     }
 }
