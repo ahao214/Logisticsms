@@ -50,7 +50,7 @@
                                 Tag="&#xe621;"
                                 Style="{StaticResource MenuButtonStyle}" />
                     </StackPanel>
-                    <TextBlock Grid.Column="1" Text="枯藤钱华物流有限公司" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBlock Grid.Column="1" Text="枯藤钱华物流有限公司" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" />
                 </Grid>
                 <!--right top-->
                 <Grid Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" MinHeight="60">
@@ -64,16 +64,22 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Row="0"
                                Grid.Column="0"
-                               Text="当前用户：" FontSize="14" />
+                               Text="当前用户："
+                               FontSize="14"
+                               Foreground="White" />
                     <TextBlock Grid.Row="1"
                                Grid.Column="0"
-                               Text="系统时间："  FontSize="14"/>
+                               Text="系统时间："
+                               FontSize="14"
+                               Foreground="White" />
                     <TextBlock Grid.Row="0"
                                Grid.Column="1"
-                               Text="{Binding AppData.CurrentUser.Name}" />
+                               Text="{Binding AppData.CurrentUser.Name}"
+                               Foreground="White" />
                     <TextBlock Grid.Row="1"
                                Grid.Column="1"
-                               Text="{Binding AppData.SystemTime}" />
+                               Text="{Binding AppData.SystemTime}"
+                               Foreground="White" />
                 </Grid>
             </Grid>
 
