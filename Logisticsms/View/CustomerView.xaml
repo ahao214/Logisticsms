@@ -24,10 +24,10 @@
             </Grid.RowDefinitions>
             <!--  标题和按钮  -->
             <Grid Grid.Row="0">
-                <TextBlock HorizontalAlignment="Center"
+                <TextBlock  HorizontalAlignment="Left"
                            VerticalAlignment="Center"
                            FontSize="18"
-                           Text="客户管理" />
+                           Text=">>客户管理" Margin="10 0 0 0" />
                 <StackPanel Margin="0,0,8,0"
                             HorizontalAlignment="Right"
                             Orientation="Horizontal">
