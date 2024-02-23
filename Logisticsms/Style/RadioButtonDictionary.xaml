@@ -17,68 +17,43 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="RadioButton">
-                    <Grid x:Name="grid"
-                          Background="Transparent">
-                        <Grid.RowDefinitions>
-                            <RowDefinition />
-                            <RowDefinition />
-                        </Grid.RowDefinitions>
-                        <Border x:Name="border"
-                                Grid.RowSpan="2"
-                                HorizontalAlignment="Right"
-                                BorderBrush="#00AFFF" />
-                        <TextBlock Grid.Row="0"
-                                   Margin="0,10,0,10"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   FontFamily="../Fonts/#iconfont"
-                                   FontSize="20"
-                                   Text="{TemplateBinding Tag}" />
-                        <TextBlock Grid.Row="1"
-                                   Margin="10,0,10,10"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   FontSize="{TemplateBinding FontSize}"
-                                   FontWeight="Light"
-                                   Text="{TemplateBinding Content}" />
-                    </Grid>
+                    <Border x:Name="border"
+                            Grid.RowSpan="2"
+                            HorizontalAlignment="Right"                
+                            CornerRadius="5">
+                        <Grid x:Name="grid"
+                              Background="Transparent">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            
+                            <TextBlock Grid.Row="0"
+                                       Margin="0,10,0,10"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontFamily="../Fonts/#iconfont"
+                                       FontSize="20"
+                                       Text="{TemplateBinding Tag}" />
+                            <TextBlock Grid.Row="1"
+                                       Margin="10,0,10,10"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontSize="{TemplateBinding FontSize}"
+                                       FontWeight="Light"
+                                       Text="{TemplateBinding Content}" />
+                        </Grid>
+                    </Border>
+                  
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked"
                                  Value="True">
-                            <Setter TargetName="grid"
-                                    Property="Background"
-                                    Value="#2D384A" />
-                            <Setter Property="Foreground"
-                                    Value="#DFE7E9" />
                             <Setter TargetName="border"
-                                    Property="BorderThickness"
-                                    Value="4,0,0,0" />
-
-                        </Trigger>
-
-                        <Trigger Property="IsChecked"
-                                 Value="False">
-                            <Setter TargetName="grid"
                                     Property="Background"
-                                    Value="Transparent" />
+                                    Value="#95EC69" />
                             <Setter Property="Foreground"
-                                    Value="#9BAABD" />
-                            <Setter TargetName="border"
-                                    Property="BorderThickness"
-                                    Value="0" />
-
+                                    Value="Black" />
                         </Trigger>
-
-                        <Trigger Property="IsMouseOver"
-                                 Value="True">
-                            <Setter TargetName="grid"
-                                    Property="Background"
-                                    Value="#2D384A" />
-                            <Setter Property="Foreground"
-                                    Value="#DFE7E9" />
-
-                        </Trigger>
-
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>

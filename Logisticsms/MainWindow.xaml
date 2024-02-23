@@ -39,16 +39,18 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="0 0 0 10 ">
-                        <Button x:Name="CustomerView" Click="Button_Click"
+                        <RadioButton x:Name="CustomerView" Click="Button_Click"
                                 Content="客户管理"
                                 Tag="&#xe68a;"
-                                Style="{StaticResource MenuButtonStyle}" />
-                        <Button Click="Button_Click" Content="财务管理"
+                                Style="{StaticResource MenuRadioButtonStyle}" GroupName="menu"/>
+                        <RadioButton Click="Button_Click" Content="财务管理"
                                 Tag="&#xe62a;"
-                                Style="{StaticResource MenuButtonStyle}" />
-                        <Button Click="Button_Click" Content="系统管理"
+                                     Style="{StaticResource MenuRadioButtonStyle}"
+                                     GroupName="menu" />
+                        <RadioButton Click="Button_Click" Content="系统管理"
                                 Tag="&#xe621;"
-                                Style="{StaticResource MenuButtonStyle}" />
+                                     Style="{StaticResource MenuRadioButtonStyle}"
+                                     GroupName="menu" />
                     </StackPanel>
                     <TextBlock Grid.Column="1" Text="枯藤钱华物流有限公司" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" />
                 </Grid>
@@ -97,30 +99,18 @@
                                  Click="RadioButton_Click"
                                  Content="空运"
                                  Style="{StaticResource RadioButtonStyle}"
-                                 Tag="&#xe69b;" />
+                                 Tag="&#xe69b;"
+                                 GroupName="menu" />
                     <RadioButton Click="RadioButton_Click"
                                  Content="海运"
                                  Style="{StaticResource RadioButtonStyle}"
-                                 Tag="&#xe692;" />
+                                 Tag="&#xe692;"
+                                 GroupName="menu" />
                     <RadioButton Click="RadioButton_Click"
                                  Content="快递"
                                  Style="{StaticResource RadioButtonStyle}"
-                                 Tag="&#xe6a4;" />
-                    <RadioButton Visibility="Collapsed" 
-                                 Click="RadioButton_Click"
-                                 Content="客户管理"
-                                 Style="{StaticResource RadioButtonStyle}"
-                                 Tag="&#xe68a;" />
-                    <RadioButton Visibility="Collapsed"
-                                 Click="RadioButton_Click"
-                                 Content="财务管理"
-                                 Style="{StaticResource RadioButtonStyle}"
-                                 Tag="&#xe62a;" />
-                    <RadioButton Visibility="Collapsed"
-                                 Click="RadioButton_Click"
-                                 Content="系统管理"
-                                 Style="{StaticResource RadioButtonStyle}"
-                                 Tag="&#xe621;" />
+                                 Tag="&#xe6a4;"
+                                 GroupName="menu" />
                 </StackPanel>
                 <ContentControl x:Name="container"
                                 Grid.Column="1"
