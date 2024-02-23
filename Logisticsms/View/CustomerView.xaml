@@ -1,9 +1,12 @@
-﻿<UserControl
-    x:Class="Logisticsms.View.CustomerView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:local="clr-namespace:Logisticsms.View" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="450"
-    d:DesignWidth="800"
-    DataContext="{Binding Source={StaticResource Locator}, Path=Customer}"
-    mc:Ignorable="d">
+﻿<UserControl x:Class="Logisticsms.View.CustomerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:local="clr-namespace:Logisticsms.View"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"            
+             DataContext="{Binding Source={StaticResource Locator}, Path=Customer}"
+             mc:Ignorable="d">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <i:InvokeCommandAction Command="{Binding LoadedCommand}" />
@@ -17,73 +20,106 @@
         </Grid.RowDefinitions>
         <!--  标题和按钮  -->
         <Grid Grid.Row="0">
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Text="客户管理" />
-            <StackPanel Margin="0,0,8,0" HorizontalAlignment="Right" Orientation="Horizontal">
-                <Button Command="{Binding InsertCustomerCommand}" Content="新增客户" Style="{StaticResource ButtonStyle}" />
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="18"
+                       Text="客户管理" />
+            <StackPanel Margin="0,0,8,0"
+                        HorizontalAlignment="Right"
+                        Orientation="Horizontal">
+                <Button Command="{Binding InsertCustomerCommand}"
+                        Content="新增客户"
+                        Style="{StaticResource ButtonStyle}" />
             </StackPanel>
         </Grid>
         <!--  表格内容  -->
-        <DataGrid
-            Grid.Row="1"
-            CellStyle="{StaticResource GeneralDataGridCellStyle}"
-            ItemsSource="{Binding CustomerList}"
-            RowStyle="{StaticResource GeneralDataGridRowStyle}"
-            Style="{StaticResource GeneralDataGridStyle}">
+        <DataGrid Grid.Row="1"
+                  CellStyle="{StaticResource GeneralDataGridCellStyle}"
+                  ItemsSource="{Binding CustomerList}"
+                  RowStyle="{StaticResource GeneralDataGridRowStyle}"
+                  Style="{StaticResource GeneralDataGridStyle}">
 
             <DataGrid.Columns>
-                <DataGridTextColumn Width="60" Binding="{Binding Id}" Header="序号" />
+                <DataGridTextColumn Width="60"
+                                    Binding="{Binding Id}"
+                                    Header="序号" />
 
-                <DataGridTemplateColumn Width="150" Header="客户名称">
+                <DataGridTemplateColumn Width="150"
+                                        Header="客户名称">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Grid>
-                                <TextBox Style="{StaticResource GeneralTextBoxStyle}" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                <TextBox Style="{StaticResource GeneralTextBoxStyle}"
+                                         Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTemplateColumn Width="150" Header="电话">
+                <DataGridTemplateColumn Width="150"
+                                        Header="电话">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Grid>
-                                <TextBox Style="{StaticResource GeneralTextBoxStyle}" Text="{Binding Telephone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                <TextBox Style="{StaticResource GeneralTextBoxStyle}"
+                                         Text="{Binding Telephone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTemplateColumn Width="150" Header="国家">
+                <DataGridTemplateColumn Width="150"
+                                        Header="国家">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Grid>
-                                <TextBox Style="{StaticResource GeneralTextBoxStyle}" Text="{Binding Nation, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                <TextBox Style="{StaticResource GeneralTextBoxStyle}"
+                                         Text="{Binding Nation, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTemplateColumn Width="150" Header="地址">
+                <DataGridTemplateColumn Width="150"
+                                        Header="地址">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Grid>
-                                <TextBox Style="{StaticResource GeneralTextBoxStyle}" Text="{Binding Address, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                <TextBox Style="{StaticResource GeneralTextBoxStyle}"
+                                         Text="{Binding Address, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTemplateColumn Width="150" Header="备注">
+                <DataGridTemplateColumn Width="150"
+                                        Header="备注">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Grid>
-                                <TextBox Style="{StaticResource GeneralTextBoxStyle}" Text="{Binding Tag, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                <TextBox Style="{StaticResource GeneralTextBoxStyle}"
+                                         Text="{Binding Tag, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTextColumn Width="150" Binding="{Binding InsertDate}" Header="录入时间" />
+                <DataGridTextColumn Width="150"
+                                    Binding="{Binding InsertDate}"
+                                    Header="录入时间" />
+
+                <DataGridTemplateColumn Width="80"
+                                        Header="操作">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Button Content="删除" Tag="{Binding}"
+                                        Command=""
+                                        CommandParameter="" Style="{StaticResource DataGridDeleteButtonStyle}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
 
             </DataGrid.Columns>
 

@@ -76,9 +76,7 @@ namespace Logisticsms.ViewModel
             }
 
         }
-
-
-
+       
 
         #endregion
 
