@@ -35,10 +35,20 @@
                 <!--left top-->
                 <Grid Grid.Column="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition />
+                        <ColumnDefinition Width="auto" />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="客户管理"
+                                Tag="&#xe68a;"
+                                Style="{StaticResource MenuButtonStyle}" />
+                        <Button Content="财务管理"
+                                Tag="&#xe62a;"
+                                Style="{StaticResource MenuButtonStyle}" />
+                        <Button Content="系统管理"
+                                Tag="&#xe621;"
+                                Style="{StaticResource MenuButtonStyle}" />
+                    </StackPanel>
                     <TextBlock Grid.Column="1" Text="枯藤钱华物流有限公司" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center" />
                 </Grid>
                 <!--right top-->
