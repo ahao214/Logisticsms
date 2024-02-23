@@ -22,11 +22,47 @@
               Opacity="0.50" Visibility="Collapsed" />
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition Height="auto" />
+                <RowDefinition Height="100"/>
+                <RowDefinition  />
             </Grid.RowDefinitions>
+
             <Grid Grid.Row="0"
-                  Tag="主体内容">
+                  Tag="状态栏">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="250" />
+                </Grid.ColumnDefinitions>
+                <!--left top-->
+                <Grid Grid.Column="0">
+                    
+                </Grid>
+                <!--right top-->
+                <Grid Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" MinHeight="60">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0"
+                               Grid.Column="0"
+                               Text="当前用户：" FontSize="14" />
+                    <TextBlock Grid.Row="1"
+                               Grid.Column="0"
+                               Text="系统时间："  FontSize="14"/>
+                    <TextBlock Grid.Row="0"
+                               Grid.Column="1"
+                               Text="{Binding AppData.CurrentUser.Name}" />
+                    <TextBlock Grid.Row="1"
+                               Grid.Column="1"
+                               Text="{Binding AppData.SystemTime}" />
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="1"
+                  Tag="主体">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto" />
                     <ColumnDefinition />
@@ -66,12 +102,7 @@
                                 Grid.Column="1"
                                 Tag="内容" />
             </Grid>
-            <Grid Grid.Row="1"
-                  Tag="状态栏">
-                <StatusBar>
-                    <TextBlock Text="使用单位：Joker科技公司" />
-                </StatusBar>
-            </Grid>
+            
 
         </Grid>
     </Grid>
