@@ -84,4 +84,71 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+
+    <!--菜单按钮样式-->
+    <Style x:Key="MenuRadioButtonStyle"
+           TargetType="RadioButton">
+        <Setter Property="FontFamily"
+                Value="../Fonts/#iconfont" />
+        <Setter Property="Margin"
+                Value="5 0 0 0" />
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="Height"
+                Value="30" />
+        <Setter Property="FontSize"
+                Value="14" />
+        <Setter Property="Width"
+                Value="auto" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <Border x:Name="border"
+                            BorderBrush="#D9DBDD"
+                            BorderThickness="0"
+                            CornerRadius="5"
+                            Padding="5"
+                            Background="{TemplateBinding Background}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0"
+                                       Text="{TemplateBinding Tag}"
+                                       FontSize="{TemplateBinding FontSize}"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Margin="5 0 5 0" />
+                            <TextBlock Grid.Column="1"
+                                       Text="{TemplateBinding Content}"
+                                       FontSize="{TemplateBinding FontSize}"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Margin="5 0 5 0" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    Value="#95EC69" />
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    Value="#AAD7FD" />
+                        </Trigger>
+                        <Trigger Property="IsChecked"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    Value="#95EC69" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
 </ResourceDictionary>
