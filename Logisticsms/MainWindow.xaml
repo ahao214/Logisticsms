@@ -39,15 +39,16 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="0 0 0 10 ">
-                        <RadioButton x:Name="CustomerView" Click="Button_Click"
+                        <RadioButton x:Name="CustomerView"
+                                     Click="RadioButton_Click"
                                 Content="客户管理"
                                 Tag="&#xe68a;"
                                 Style="{StaticResource MenuRadioButtonStyle}" GroupName="menu"/>
-                        <RadioButton Click="Button_Click" Content="财务管理"
+                        <RadioButton Click="RadioButton_Click" Content="财务管理"
                                 Tag="&#xe62a;"
                                      Style="{StaticResource MenuRadioButtonStyle}"
                                      GroupName="menu" />
-                        <RadioButton Click="Button_Click" Content="系统管理"
+                        <RadioButton Click="RadioButton_Click" Content="系统管理"
                                 Tag="&#xe621;"
                                      Style="{StaticResource MenuRadioButtonStyle}"
                                      GroupName="menu" />
