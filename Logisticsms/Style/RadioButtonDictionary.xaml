@@ -1,58 +1,81 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Style x:Key="RadioButtonStyle" TargetType="RadioButton">
-        <Setter Property="Background" Value="Transparent" />
-        <Setter Property="Foreground" Value="#9BAABD" />
-        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
-        <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="FontSize" Value="18" />
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="RadioButtonStyle"
+           TargetType="RadioButton">
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="Foreground"
+                Value="#9BAABD" />
+        <Setter Property="FocusVisualStyle"
+                Value="{x:Null}" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="FontSize"
+                Value="18" />
+        <Setter Property="Margin"
+                Value="10" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="RadioButton">
-                    <Grid x:Name="grid" Background="Transparent">
+                    <Grid x:Name="grid"
+                          Background="Transparent">
                         <Grid.RowDefinitions>
                             <RowDefinition />
                             <RowDefinition />
                         </Grid.RowDefinitions>
-                        <Border
-                            x:Name="border"
-                            Grid.RowSpan="2"
-                            HorizontalAlignment="Right"
-                            BorderBrush="#00AFFF" />
-                        <TextBlock
-                            Grid.Row="0"
-                            Margin="0,10,0,10"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            FontFamily="../Fonts/#iconfont"
-                            FontSize="20"
-                            Text="{TemplateBinding Tag}" />
-                        <TextBlock
-                            Grid.Row="1"
-                            Margin="10,0,10,10"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            FontSize="{TemplateBinding FontSize}"
-                            FontWeight="Light"
-                            Text="{TemplateBinding Content}" />
+                        <Border x:Name="border"
+                                Grid.RowSpan="2"
+                                HorizontalAlignment="Right"
+                                BorderBrush="#00AFFF" />
+                        <TextBlock Grid.Row="0"
+                                   Margin="0,10,0,10"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontFamily="../Fonts/#iconfont"
+                                   FontSize="20"
+                                   Text="{TemplateBinding Tag}" />
+                        <TextBlock Grid.Row="1"
+                                   Margin="10,0,10,10"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="{TemplateBinding FontSize}"
+                                   FontWeight="Light"
+                                   Text="{TemplateBinding Content}" />
                     </Grid>
                     <ControlTemplate.Triggers>
-                        <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="grid" Property="Background" Value="#2D384A" />
-                            <Setter Property="Foreground" Value="#DFE7E9" />
-                            <Setter TargetName="border" Property="BorderThickness" Value="4,0,0,0" />
+                        <Trigger Property="IsChecked"
+                                 Value="True">
+                            <Setter TargetName="grid"
+                                    Property="Background"
+                                    Value="#2D384A" />
+                            <Setter Property="Foreground"
+                                    Value="#DFE7E9" />
+                            <Setter TargetName="border"
+                                    Property="BorderThickness"
+                                    Value="4,0,0,0" />
 
                         </Trigger>
 
-                        <Trigger Property="IsChecked" Value="False">
-                            <Setter TargetName="grid" Property="Background" Value="Transparent" />
-                            <Setter Property="Foreground" Value="#9BAABD" />
-                            <Setter TargetName="border" Property="BorderThickness" Value="0" />
+                        <Trigger Property="IsChecked"
+                                 Value="False">
+                            <Setter TargetName="grid"
+                                    Property="Background"
+                                    Value="Transparent" />
+                            <Setter Property="Foreground"
+                                    Value="#9BAABD" />
+                            <Setter TargetName="border"
+                                    Property="BorderThickness"
+                                    Value="0" />
 
                         </Trigger>
 
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="grid" Property="Background" Value="#2D384A" />
-                            <Setter Property="Foreground" Value="#DFE7E9" />
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter TargetName="grid"
+                                    Property="Background"
+                                    Value="#2D384A" />
+                            <Setter Property="Foreground"
+                                    Value="#DFE7E9" />
 
                         </Trigger>
 

@@ -27,7 +27,7 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0"
-                  Tag="状态栏">
+                  Tag="顶部状态栏" Background="#5E7593">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition Width="250" />
@@ -88,27 +88,29 @@
                             Tag="菜单栏">
                     <RadioButton x:Name="AirTransportView"
                                  Click="RadioButton_Click"
-                                 Content="空运分页"
+                                 Content="空运"
                                  Style="{StaticResource RadioButtonStyle}"
                                  Tag="&#xe69b;" />
                     <RadioButton Click="RadioButton_Click"
-                                 Content="海运分页"
+                                 Content="海运"
                                  Style="{StaticResource RadioButtonStyle}"
                                  Tag="&#xe692;" />
                     <RadioButton Click="RadioButton_Click"
-                                 Content="快递分页"
+                                 Content="快递"
                                  Style="{StaticResource RadioButtonStyle}"
                                  Tag="&#xe6a4;" />
-                    <RadioButton x:Name="CustomerView"
+                    <RadioButton Visibility="Collapsed" x:Name="CustomerView"
                                  Click="RadioButton_Click"
                                  Content="客户管理"
                                  Style="{StaticResource RadioButtonStyle}"
                                  Tag="&#xe68a;" />
-                    <RadioButton Click="RadioButton_Click"
+                    <RadioButton Visibility="Collapsed"
+                                 Click="RadioButton_Click"
                                  Content="财务管理"
                                  Style="{StaticResource RadioButtonStyle}"
                                  Tag="&#xe62a;" />
-                    <RadioButton Click="RadioButton_Click"
+                    <RadioButton Visibility="Collapsed"
+                                 Click="RadioButton_Click"
                                  Content="系统管理"
                                  Style="{StaticResource RadioButtonStyle}"
                                  Tag="&#xe621;" />
